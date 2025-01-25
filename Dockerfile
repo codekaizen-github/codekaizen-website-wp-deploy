@@ -1,9 +1,8 @@
 FROM ghcr.io/codekaizen-github/ansible-docker-deploy:v1 AS base
 
-ARG OWNER=codekaizen-github
-ARG REPO=codekaizen-website-wp-deploy
+ARG LABEL_ORG_OPENCONTAINERS_IMAGE_SOURCE=""
 
-LABEL org.opencontainers.image.source=https://github.com/${OWNER}/${REPO}
+LABEL org.opencontainers.image.source=${LABEL_ORG_OPENCONTAINERS_IMAGE_SOURCE}
 
 COPY src /
 
